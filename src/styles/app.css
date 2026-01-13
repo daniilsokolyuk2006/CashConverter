@@ -18,7 +18,7 @@
 } */
 
 :root {
-    --primary: rgb(35, 31, 155);
+    --primary: rgb(26, 23, 117);
     --secondary: rgb(68, 73, 223);
     --menus: rgb(77, 77, 77);
     --menus2: rgb(40, 130, 116);
@@ -165,7 +165,7 @@ p {
 .converter-block-background {
     height: 65vh;
     width: 100%;
-    background-image: url("../assets/97534e2d-db78-40b3-ad5d-6750cb65c673.jpg");
+    background-image: url("../assets/Dark Blue Gradient Background.jpg");
     background-size:cover;
     overflow: hidden;
     text-align: center;
@@ -467,7 +467,7 @@ p {
 
 .footer-background {
     padding:15px;
-    background-image: url("../assets/97534e2d-db78-40b3-ad5d-6750cb65c673.jpg");
+    background-image: url("../assets/Dark Blue Gradient Background.jpg");
     background-size:cover;
     background-attachment: fixed;
     display: flex;
