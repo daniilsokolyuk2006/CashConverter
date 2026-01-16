@@ -35,6 +35,7 @@ git clone https://github.com/daniilsokolyuk2006/CashConverter.git
    cd CashConverter
 
 3. Install dependencies
+   
     npm install
     npm install recharts
 
