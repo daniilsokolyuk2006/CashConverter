@@ -1,16 +1,51 @@
-# React + Vite
+# KantorX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**KantorX** is a simple and modern web application built with **ReactJS + Vite** that allows users to convert currencies and view currency strength statistics. The application uses external APIs to fetch up-to-date exchange rates and visualizes selected data using charts.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Currency conversion between popular world currencies
+- Visualization of currency strength statistics
+- Charts created with Recharts
+- Uses daily updated exchange rate APIs
+- Fast and lightweight thanks to Vite and React
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Technologies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ReactJS
+- Vite
+- JavaScript (ES6+)
+- Recharts (data visualization)
+- REST APIs for exchange rates
+
+---
+
+## How to Run
+
+1. Clone the repository:
+   
+git clone https://github.com/daniilsokolyuk2006/CashConverter.git
+
+2. Navigate to the project dorectory
+
+   cd CashConverter
+
+3. Install dependencies
+    npm install
+    npm install recharts
+
+4. RUN
+
+   npm run dev
+
+API Sources
+
+The project uses external APIs to retrieve currency exchange rates, such as:
+
+ExchangeRate API
+
+Frankfurter API
