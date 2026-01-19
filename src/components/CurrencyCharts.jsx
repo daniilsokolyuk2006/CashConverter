@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { LineChart,Line, XAxis,YAxis,Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
 import CustomTooltip from "./CustomTooltip";
 import { fetchHistoricalRates } from "../services/HistoricalRates";
+import { useTranslation } from "react-i18next";
 
 export default function CurrnecyCharts ({base, target, days, children}) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     
+    const {i18n, t} = useTranslation();
 
     // function CalcDailyChange (data) {
     //     return data.map((item, index) => {
@@ -78,8 +80,8 @@ export default function CurrnecyCharts ({base, target, days, children}) {
 
     return (
         <div className="charts-wrapper" >
-            <h1>Currency charts:</h1>
-            <p>{`This shart shows ${base} / ${target} or just "Currency strange"`}</p>
+            <h1>{t("currencyChartsTitle")}</h1>
+            <p className="chartDisc" >{t("currencyChartDisc", {base : base, target : target})}</p>
             <div className="charts-inner">
                 <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={data} >

@@ -110,6 +110,7 @@ p {
     z-index: 4;
     justify-content: space-between;
     border-bottom: 3px solid var(--shadow);
+    box-sizing: border-box;
 }
 
 #label {
@@ -143,6 +144,35 @@ p {
 }
 
 .nav-btn:hover {
+    background-color: var(--buttons);
+    color:var(--text-color);
+
+}
+
+.navigation {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+}
+
+.languages {
+    display: flex;
+    align-items: center;
+    
+}
+
+.languages h3 {
+    color:var(--text-color2);
+    margin: 0 15px;
+    padding:15px;
+    border-left: 2px solid var(--text-color2);
+    font-family: var(--secondary-font-style);
+}
+
+.nav-btn.choosen {
     background-color: var(--buttons);
     color:var(--text-color);
 
@@ -233,6 +263,8 @@ p {
     margin-top:0;
 
 }
+
+
 .content-text {
     font-family: var(--secondary-font-style);
     font-size: 20px;
@@ -357,7 +389,7 @@ p {
 }
 
 .content-background {
- width: 100vw;
+ width: 100%;
  min-height: 60vh;
  display:flex;
  box-sizing: border-box;
@@ -388,6 +420,7 @@ p {
     display: block;
     padding:0 15px 10px 15px;
     border-bottom: 1px solid var(--shadow);
+    text-align: center;
 }
 
 
@@ -418,6 +451,16 @@ p {
     padding: 25px 10px;
     background-color: var(--buttons);
     border-radius: 10px;
+}
+
+.chartDisc {
+    display: block;
+    width: 45%;
+    text-align: center;
+    padding:20px;
+    padding-top:0;
+    margin: 15px;
+    border-bottom: 2px solid var(--shadow);
 }
 
 .chart-btn-wrapper {
@@ -475,6 +518,7 @@ p {
     align-items: center;
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .footer-inner {

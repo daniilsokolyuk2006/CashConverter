@@ -1,0 +1,19 @@
+{
+  "convAndCalcTitle": "Konwertuj i oblicz...",
+  "firstBlockText": "Dokładne zarządzanie pieniędzmi jest dziś niezwykle ważne. Niezależnie od tego, czy podróżujesz, robisz zakupy online czy współpracujesz z klientami zagranicznymi, znajomość realnej wartości pieniędzy pomaga podejmować lepsze decyzje.\n\nKursy walut zmieniają się każdego dnia, a nawet niewielkie różnice mogą wpłynąć na Twój budżet. Nasza usługa umożliwia szybkie i proste przeliczanie walut. Przejrzysty interfejs i aktualne kursy pozwalają zawsze wiedzieć, ile wydajesz lub otrzymujesz. To oszczędność czasu, mniej błędów i większa pewność w finansach międzynarodowych.",
+  "dataAccuracyTitle": "Dokładność danych",
+  "dataAcurracyText": "Nasz konwerter zapewnia aktualne i precyzyjne kursy wymiany w czasie rzeczywistym. Masz pewność, że obliczenia odzwierciedlają bieżące zmiany rynkowe. Pomaga to unikać błędów i usprawnia zarządzanie finansami.",
+  "user-FriendlyInterfaceTitle": "Przyjazny interfejs",
+  "user-FriendyInterfaceText": "Interfejs naszej usługi jest prosty i intuicyjny. Nawet początkujący użytkownicy mogą szybko przeliczać waluty bez zbędnych kroków. Wszystko, czego potrzebujesz, znajduje się w jednym miejscu — bez skomplikowanych menu i ustawień.",
+  "fastAndReliableTitle": "Szybko i niezawodnie",
+  "fastAndReliableText": "Konwerter działa natychmiast, bez opóźnień, i obsługuje wszystkie popularne waluty. Możesz korzystać z niego na dowolnym urządzeniu — komputerze lub smartfonie. To niezawodne narzędzie do podróży, zakupów online i transakcji biznesowych.",
+  "currencyChartsTitle": "Wykresy walut:",
+  "currencyChartDisc": "Ten wykres pokazuje {{base}} / {{target}} lub ogólny trend kursu waluty",
+  "contact": "Kontakt:",
+  "tel": "Tel: +48-501-690-319",
+  "thanks": "Dziękujemy za skorzystanie z naszej usługi!",
+  "charts": "Wykresy",
+  "from": "Kwota początkowa:",
+  "to": "Kwota końcowa:",
+  "lng": "Język:"
+}

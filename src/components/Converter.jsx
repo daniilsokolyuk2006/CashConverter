@@ -4,6 +4,7 @@ import swapArrow from "../assets/swapArrows.png";
 import downArrow from "../assets/down-arrow.png";
 import euIcon from "../assets/Flag_of_Europe.png";
 import globeIcon from "../assets/eflag.png";
+import { useTranslation } from "react-i18next";
 
 
 export default function Converter() {
@@ -25,6 +26,7 @@ export default function Converter() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const { i18n,t } = useTranslation();
 
 
     //localStorage: сохраниение для параметров в конвертере
@@ -212,7 +214,7 @@ export default function Converter() {
             <div className="converter-card-inner">
             
                 <div className="conv-input-wrapper">
-                    <label htmlFor="fromAmount">From Amount:</label>
+                    <label htmlFor="fromAmount">{t("from")}</label>
                     <div className="input-selector-wrapper">
                             <input 
                             id="fromAmount"
@@ -246,7 +248,7 @@ export default function Converter() {
                 <button className={`swap-btn ${isSpinning ? "rotate" : ""}`} onClick={handleSwap}><img className="icon" src={swapArrow}></img></button>
 
                 <div className="conv-input-wrapper">
-                    <label htmlFor="toAmount">To amount:</label>
+                    <label htmlFor="toAmount">{t("to")}</label>
                     <div className="input-selector-wrapper">
                             <input
                             id="toAmount"
