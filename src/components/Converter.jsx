@@ -5,6 +5,7 @@ import downArrow from "../assets/down-arrow.png";
 import euIcon from "../assets/Flag_of_Europe.png";
 import globeIcon from "../assets/eflag.png";
 import { useTranslation } from "react-i18next";
+import Select from "react-select";
 
 
 export default function Converter() {
@@ -29,7 +30,9 @@ export default function Converter() {
     const { i18n,t } = useTranslation();
 
 
-    //localStorage: сохраниение для параметров в конвертере
+
+
+    //localStorage
     useEffect (() => {
         localStorage.setItem("fromVal", from);
         localStorage.setItem("toVal", to);
@@ -38,10 +41,9 @@ export default function Converter() {
 
 
     //flags___________________________________________________________________
-
     const POPULAR_CURRENCIES = {
         USD: "US",
-        // EUR: "EU", // спец-кейс
+        // EUR: "EU", // spec-case
         RUB: "RU",
         PLN: "PL",
         UAH: "UA",
@@ -72,7 +74,7 @@ export default function Converter() {
         }
     }
 
-    // console.log(`CURRENCIES OBJECT : ${currencies}`);
+    
 
     function getIconEl(currency) {
         const icon = getCurrencyIcon(currency);
@@ -103,9 +105,9 @@ export default function Converter() {
         alt={currency}
         />
     }
-
     //________________________________________________________________________
 
+//swap animation handler
     const swapAnimation = () => {
         setIsSpinning(true);
 
@@ -136,8 +138,7 @@ export default function Converter() {
         loadRates();
     }, [] );
 
-    // форматирование даты для конвертера с Exchange-API 
-
+// formatting data for converter from Exchange-API 
     const formattedUpdateDate = new Date(lastUpdateDate).toLocaleString("en-US", {
         year: "numeric",
         month: "short",
@@ -146,7 +147,7 @@ export default function Converter() {
         minute: "2-digit"
     });
 
-
+//input filter
     const handleChange = (e) => {
         let val = e.target.value;
 
@@ -162,6 +163,7 @@ export default function Converter() {
 
     };
 
+// calculating useEffect for money convert
     useEffect(()=> {
 
         if(amount== "") return;
@@ -171,6 +173,7 @@ export default function Converter() {
         setResult(newResult.toFixed(2));
     }, [from, to, amount, rates]);
 
+//swapper logic
     const handleSwap = () => {
         const currencyTemp = from;
         const amountTemp = amount;
@@ -184,8 +187,14 @@ export default function Converter() {
     }
 
 
+//select search options 
+const options = rates ? Object.keys(rates).map((currency) => ({
+    value: currency,
+    label: currency
+})) : [];
 
 
+//fast "if-renders"
     if(loading) {
         return <div className="converter-wrapper">
             <div className="converter-card">
@@ -225,8 +234,15 @@ export default function Converter() {
                             onChange={handleChange} 
                             placeholder="0.00"
                              />
-
-                             <select value={from} onChange={(e) => setFrom(e.target.value)}>
+                             <Select
+                                options={options}
+                                value = {options.find(o => o.value === from)}
+                                onChange = {(selected) => setFrom(selected.value)}
+                                isSearchable
+                                classNamePrefix="react-select"
+                                unstyled
+                             />
+                             {/* <select value={from} onChange={(e) => setFrom(e.target.value)} onFocus={() => setIsShowSearcher(true)} onBlur={() => setIsShowSearcher(false)}>
                                 {Object.keys(rates).map((currency) => (
                                     <option 
                                     key={currency} 
@@ -238,7 +254,7 @@ export default function Converter() {
                                     </option>
                                 ))}
 
-                             </select>
+                             </select> */}
                              {getIconEl(from)}
                     </div>
                     
@@ -259,7 +275,15 @@ export default function Converter() {
                             placeholder="0.00"
                             readOnly
                         />
-                        <select value={to} onChange={(e) => setTo(e.target.value)}>
+                        <Select
+                                options={options}
+                                value = {options.find(o => o.value === to)}
+                                onChange = {(selected) => setTo(selected.value)}
+                                isSearchable
+                                classNamePrefix="react-select"
+                                unstyled
+                             />
+                        {/* <select value={to} onChange={(e) => setTo(e.target.value)} >
                                     {Object.keys(rates).map((currency) => (
                                         <option 
                                         key={currency} 
@@ -271,7 +295,7 @@ export default function Converter() {
                                         </option>
                                     ))}
 
-                                </select>
+                                </select> */}
                                 {getIconEl(to)}
                     </div>
                     
